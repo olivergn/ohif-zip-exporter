@@ -1,5 +1,5 @@
 {
-  "name": "export-zip",
+  "name": "@ohif/mode-export-zip",
   "version": "0.0.1",
   "description": "Mode which defines toolbar button and logic for exporting .zip files",
   "author": "Oliver Nyland",

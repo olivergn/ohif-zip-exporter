@@ -1,5 +1,5 @@
 {
-  "name": "export-zip",
+  "name": "@ohif/extension-export-zip",
   "version": "0.0.1",
   "description": "Extension for exporting image and metadata to .zip file",
   "author": "Oliver Nyland",
