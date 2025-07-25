@@ -1,4 +1,5 @@
 import { id } from './id';
+import commandsModule from './commandsModule';
 
 /**
  * You can remove any of the following modules if you don't need them.
@@ -38,5 +39,15 @@ export default {
    */
   getSopClassHandlerModule({ servicesManager, commandsManager, extensionManager }) {
     return null;
+  },
+  /**
+   * CommandsModule should provide a list of commands that will be available in OHIF
+   * for Modes to consume and use in the viewports. Each command is defined by
+   * an object of { actions, definitions, defaultContext } where actions is an
+   * object of functions, definitions is an object of available commands, their
+   * options, and defaultContext is the default context for the command to run against.
+   */
+  getCommandsModule({ servicesManager, commandsManager, extensionManager }) {
+    return commandsModule
   },
 };
