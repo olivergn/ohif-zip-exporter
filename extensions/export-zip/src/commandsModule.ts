@@ -1,4 +1,4 @@
-export default {
+export default [{
   definitions: {
     exportZip: {
       commandFn: () => {
@@ -6,4 +6,4 @@ export default {
       }
     }
   }
-};
+}];

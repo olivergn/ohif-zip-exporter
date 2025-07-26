@@ -18,7 +18,7 @@ export default {
    * splitButton toolButton that the default extension is providing.
    */
   getToolbarModule({ servicesManager, commandsManager, extensionManager }) {
-    return {
+    return [{
       definitions: [
         {
           id: 'export-zip',
@@ -29,7 +29,7 @@ export default {
         }
       ],
       defaultContext: ['ROUTE:VIEWER'],
-    };
+    }];
   },
   /**
    * SopClassHandlerModule should provide a list of sop class handlers that will be
@@ -38,7 +38,7 @@ export default {
    * Examples include the default sop class handler provided by the default extension
    */
   getSopClassHandlerModule({ servicesManager, commandsManager, extensionManager }) {
-    return null;
+    return [];
   },
   /**
    * CommandsModule should provide a list of commands that will be available in OHIF
