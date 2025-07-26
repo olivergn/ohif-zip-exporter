@@ -2,6 +2,8 @@ import { hotkeys } from '@ohif/core';
 import { initToolGroups, toolbarButtons } from '@ohif/mode-longitudinal';
 import { id } from './id';
 
+import exportZipExtension from '@ohif/extension-export-zip';
+
 const ohif = {
   layout: '@ohif/extension-default.layoutTemplateModule.viewerLayout',
   sopClassHandler: '@ohif/extension-default.sopClassHandlerModule.stack',
@@ -50,6 +52,14 @@ function modeFactory({ modeConfiguration }) {
       initToolGroups(extensionManager, toolGroupService, commandsManager);
 
       toolbarService.register([...toolbarButtons]);
+
+      const exportZipModules = exportZipExtension.getToolbarModule({
+        servicesManager,
+        commandsManager,
+        extensionManager,
+      });
+      toolbarService.register([...exportZipModules]);
+
       toolbarService.updateSection('primary', [
         'MeasurementTools',
         'Zoom',
