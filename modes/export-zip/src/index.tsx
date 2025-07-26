@@ -21,7 +21,7 @@ const cornerstone = {
 const extensionDependencies = {
   '@ohif/extension-default': '^3.0.0',
   '@ohif/extension-cornerstone': '^3.0.0',
-  '@ohihf/extension-export-zip': '^0.0.1',
+  '@ohif/extension-export-zip': '^0.0.1',
 };
 
 function modeFactory({ modeConfiguration }) {
