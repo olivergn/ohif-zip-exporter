@@ -37,7 +37,23 @@ export default {
    * {name, defaultComponent, clickHandler }. Examples include radioGroupIcons and
    * splitButton toolButton that the default extension is providing.
    */
-  getToolbarModule: ({ servicesManager, commandsManager, extensionManager }) => {},
+  getToolbarModule: () => {
+    return [
+      {
+          id: 'ExportZip',
+          uiType: 'ohif.toolButton',
+          props: {
+            type: 'tool',
+            icon: 'tool-circle',
+            label: 'Export ZIP',
+            commands: {
+              commandName: 'export-zip',
+            },
+            evaluate: 'evaluate.action',
+          },
+        },
+    ];
+  },
   /**
    * LayoutTemplateMOdule should provide a list of layout templates that will be
    * available in OHIF for Modes to consume and use to layout the viewer.
