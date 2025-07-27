@@ -19,6 +19,7 @@ export default {
    */
   getToolbarModule({ servicesManager, commandsManager, extensionManager }) {
     return [{
+      id: 'ExportZip',
       definitions: [
         {
           id: 'export-zip',
