@@ -1,9 +1,10 @@
-export default [{
+export default {
   definitions: {
     exportZip: {
-      commandFn: () => {
+      commandFn: ({ servicesManager }) => {
         console.log("A .zip will be exported here.")
-      }
-    }
-  }
-}];
+      },
+    },
+  },
+  defaultContext: 'VIEWER',
+};
