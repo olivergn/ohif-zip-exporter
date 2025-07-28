@@ -44,7 +44,7 @@ export default {
           uiType: 'ohif.toolButton',
           props: {
             type: 'tool',
-            icon: 'tool-circle',
+            icon: 'icon-download',
             label: 'Export ZIP',
             commands: {
               commandName: 'export-zip',
