@@ -1,12 +1,14 @@
-export default {
-  definitions: {
-    'export-zip': {
-      commandFn: ({ servicesManager }) => {
-        console.log('Export ZIP button clicked!');
+import exportZip from './utils/exportZip';
+
+export default function commandsModule({ servicesManager }) {
+  return {
+    definitions: {
+      'export-zip': {
+        commandFn: () => exportZip({ servicesManager }),
+        options: {},
+        context: [],
       },
-      options: {},
-      context: [],
     },
-  },
-  defaultContext: 'VIEWER',
-};
+    defaultContext: 'VIEWER',
+  };
+}

@@ -86,7 +86,7 @@ export default {
    * object of functions, definitions is an object of available commands, their
    * options, and defaultContext is the default context for the command to run against.
    */
-  getCommandsModule: ({ servicesManager }) => commandsModule,
+  getCommandsModule: ({ servicesManager }) => commandsModule({ servicesManager }),
   /**
    * ContextModule should provide a list of context that will be available in OHIF
    * and will be provided to the Modes. A context is a state that is shared OHIF.
