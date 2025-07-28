@@ -33,12 +33,12 @@ function modeFactory({ modeConfiguration }) {
      * is used to identify the mode in the viewer's state.
      */
     id,
-    routeName: 'template',
+    routeName: 'export-zip',
     /**
      * Mode name, which is displayed in the viewer's UI in the workList, for the
      * user to select the mode.
      */
-    displayName: 'Template Mode',
+    displayName: 'Export ZIP',
     /**
      * Runs when the Mode Route is mounted to the DOM. Usually used to initialize
      * Services and other resources.
