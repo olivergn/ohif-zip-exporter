@@ -1,6 +1,8 @@
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 
+import cornerstone from '@ohif/extension-cornerstone';
+
 // DicomMetadataStore contains all relevant metadata
 import { DicomMetadataStore } from '@ohif/core';
 
@@ -8,9 +10,9 @@ export default async function exportZip({ servicesManager }) {
   // Relevant services for retrieving information about viewport
   const { DisplaySetService, ViewportGridService } = servicesManager.services;
 
-  // Get relevant display set UID for this viewport
-  const { viewports } = ViewportGridService.getState();
-  const displaySetInstanceUID = viewports?.entries()?.next()?.value?.[1]?.displaySetInstanceUIDs?.[0];
+  // Get relevant display set UID for the active viewport
+  const { viewports, activeViewportId } = ViewportGridService.getState();
+  const displaySetInstanceUID = viewports?.get(activeViewportId)?.displaySetInstanceUIDs?.[0];
 
   // If no such UID exists, we won't be able to retrieve the metadata
   if (!displaySetInstanceUID) {
