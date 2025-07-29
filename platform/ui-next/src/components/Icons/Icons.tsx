@@ -742,6 +742,8 @@ export const Icons = {
   'icon-alert-small': (props: IconProps) => Alert(props),
   'icon-alert-outline': (props: IconProps) => AlertOutline(props),
   'status-alert': (props: IconProps) => StatusAlert(props),
+  // Download icon
+  'icon-download': (props: IconProps) => Download(props),
   info: (props: IconProps) => Info(props),
   'notifications-info': (props: IconProps) => NotificationInfo(props),
   'notificationwarning-diamond': (props: IconProps) => NotificationWarning(props),
