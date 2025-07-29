@@ -7,11 +7,9 @@
 This project was created as part of a take-home coding challenge for OssAbility. The challenge involved implementing a new extension and mode which define a new toolbar button and functionality for exporting metadata and images to .zip files.
 
 ## Instructions for running
-This project should be able to be run as standard OHIF would be. Specifically, once the repository is cloned, make sure that `yarn` is installed on your machine (it can be installed via `npm install --global yarn`). Once this is done, you can navigate to the root directory of this repository, and run the following commands:
+This project should be able to be run as standard OHIF would be. Specifically, once the repository is cloned, make sure that `yarn` is installed on your machine (it can be installed via `npm install --global yarn`, and if you are on Windows you may have to add it to your system environment variables). Once this is done, you can navigate to the root directory of this repository, and run the following commands:
 
 `yarn install`
-
-`yarn build`
 
 `yarn run dev`
 
