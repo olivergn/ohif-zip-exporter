@@ -9,9 +9,10 @@ This project was created as part of a take-home coding challenge for OssAbility.
 ## Instructions for running
 This project should be able to be run as standard OHIF would be. Specifically, once the repository is cloned, make sure that `yarn` is installed on your machine (it can be installed via `npm install --global yarn`, and if you are on Windows you may have to add it to your system environment variables). Once this is done, you can navigate to the root directory of this repository, and run the following commands:
 
-`yarn install`
-
-`yarn run dev`
+```
+yarn install
+yarn run dev
+```
 
 Once this is done, the modified OHIF Viewer should appear in your browser. You can then navigate to any given study, and select the "Export ZIP" mode, to see the new mode in action.
 
