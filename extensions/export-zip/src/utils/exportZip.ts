@@ -23,7 +23,7 @@ export default async function exportZip({ servicesManager }) {
 
   // Get relevant metadata from study UID
   const studyMetadata = DicomMetadataStore.getStudy(studyInstanceUID);
-  const patientName = studyMetadata?.series?.[0]?.instances?.[0]?.PatientName?.Alphabetic;
+  const patientName = studyMetadata?.series?.[0]?.instances?.[0]?.PatientName?.Alphabetic?.replace('^', ' ');
   const studyDate = studyMetadata?.series?.[0]?.instances?.[0]?.StudyDate;
 
   // Create JSON structure containing relevant metadata
