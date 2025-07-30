@@ -1,6 +1,8 @@
 # OHIF ZIP Exporter
 > An OHIF Viewer clone which supports exporting to .zip files.
 
+![GIF of viewer in action](export-zip.gif)
+
 **Creator:** Oliver Nyland
 
 ## General information
