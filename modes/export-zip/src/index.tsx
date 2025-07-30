@@ -2,6 +2,7 @@ import { hotkeys } from '@ohif/core';
 import { initToolGroups, toolbarButtons } from '@ohif/mode-longitudinal';
 import { id } from './id';
 
+// Import the extension for button functionality
 import exportZipExtension from '@ohif/extension-export-zip';
 
 const ohif = {
@@ -51,9 +52,9 @@ function modeFactory({ modeConfiguration }) {
       // Init Default and SR ToolGroups
       initToolGroups(extensionManager, toolGroupService, commandsManager);
 
+      // Register ExportZip button from extension toolbar module
       const extensionButtons = exportZipExtension.getToolbarModule();
       toolbarService.register([...toolbarButtons, ...extensionButtons]);
-      console.log(toolbarService.getButtons());
 
       toolbarService.updateSection('primary', [
         'MeasurementTools',
@@ -65,6 +66,7 @@ function modeFactory({ modeConfiguration }) {
         'Layout',
         'Crosshairs',
         'MoreTools',
+        // Add ExportZip at the end of the toolbar
         'ExportZip',
       ]);
 
