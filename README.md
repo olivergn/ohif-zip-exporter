@@ -1,5 +1,5 @@
 # OHIF ZIP Exporter
-> An OHIF clone which supports exporting to .zip files.
+> An OHIF Viewer clone which supports exporting to .zip files.
 
 **Creator:** Oliver Nyland
 
@@ -36,7 +36,8 @@ I ran into a few challenges along the way, which I tackled as follows:
 ## Disclosures
 As this was my first project working with OHIF Viewer, there are some things worth noting that I would have done differently given more time, or that I am otherwise unsure about.
 
-* When using the "Export ZIP" mode, viewport canvases are displayed in a grid, rather than with one central viewport, as in the "Basic Viewer" mode. I suspect that this is because I have left my mode's `layoutTemplate` unaltered from the template. Given more time, I may have changed this, but I ultimately decided that it is fine as-is, as this allows different viewports to be more easily selected.
+* When using the "Export ZIP" mode, viewport canvases are displayed in a grid, rather than with one central viewport, as in the "Basic Viewer" mode. I suspect that this is because I have left my mode's `layoutTemplate` unaltered from the template. Given more time, I may have changed this, but I ultimately decided that it is fine as-is, as this allows different viewports to be more easily selected. Viewports can still be double clicked to view individually.
 * Some studies will display a 403 Forbidden error when opened in "Export ZIP" mode, due to insufficient permissions to access resources. With more time, I would look into ways to address this, but this occurs in relatively few studies, so it was a low priority.
+* Some studies will otherwise display errors or freeze the app, whether in "Export ZIP" mode or in "Basic Viewer" mode, and upon returning to the homepage, warnings about routing may be presented. Many of these errors still occur even with the unaltered OHIF Viewer code, so I was limited in my ability to fix them with my current knowledge of the codebase.
 * The structure for retrieving metadata, elements, viewports, and canvases within the `exportZip.ts` file is quite robust, and depends on certain uniform elements of metadata and document structures. While this does work for purpose, given more time, I would want to make this system more dynamic, both to accomodate for unusual data and to future-proof this app against potential changes.
 * It is worth noting that the `export-zip` extension and `export-zip` mode are contained in the `./extensions` and `./modes` directories, respectively. While the challenge seems to suggest that the mode should be contained within the extension, OHIF v3.x's modular structure seems to indicate that defining modes and extensions separately with linked dependencies is best practice. At any rate, this is something which could be easily corrected either way.
