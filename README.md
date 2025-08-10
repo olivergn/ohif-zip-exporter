@@ -6,7 +6,7 @@
 **Creator:** Oliver Nyland
 
 ## General information
-This project was created as part of a take-home coding challenge for OssAbility. The challenge involved implementing a new extension and mode that define a new toolbar button and functionality for exporting metadata and image data to a `.zip` file.
+This project was created as part of a coding challenge involving implementing a new extension and mode that define a new toolbar button and functionality for exporting metadata and image data to a `.zip` file.
 
 ## Instructions for usage
 This project runs like a standard OHIF Viewer instance. Once the repository is cloned, ensure that `yarn` is installed on your machine (it can be installed via `npm install --global yarn`). On Windows, you may also need to add `yarn` to your system environment variables. Once this is done, you can navigate to the root directory of this repository and run the following commands:
